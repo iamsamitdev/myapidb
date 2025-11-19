@@ -391,7 +391,7 @@ async def scalar_html():
 # การรันแอปพลิเคชัน
 # ใช้คำสั่งนี้เพื่อรัน: uv run main.py
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("main:app", host="localhost", port=8000, reload=True)
 ```
 
 ## Step 14: รันแอปพลิเคชัน
@@ -402,8 +402,8 @@ uv run main.py
 
 ### Step 15: ทดสอบ API
 เปิดเว็บเบราว์เซอร์และไปที่ URL ต่อไปนี้เพื่อตรวจสอบ API:
-- เอกสาร API อัตโนมัติ: `http://127.0.0.1:8000/docs`
-- Scalar API reference: `http://127.0.0.1:8000/scalar`
+- เอกสาร API อัตโนมัติ: `http://localhost:8000/docs`
+- Scalar API reference: `http://localhost:8000/scalar`
 
 ### API Endpoints Summary
 - สร้างผู้ใช้ใหม่: `POST /users/`
@@ -609,8 +609,8 @@ docker compose up -d --build
 
 ### Step 6: ทดสอบ API
 เปิดเว็บเบราว์เซอร์และไปที่ URL ต่อไปนี้เพื่อตรวจสอบ API:
-- เอกสาร API อัตโนมัติ: `http://127.0.0.1:8000/docs`
-- Scalar API reference: `http://127.0.0.1:8000/scalar`
+- เอกสาร API อัตโนมัติ: `http://localhost:8000/docs`
+- Scalar API reference: `http://localhost:8000/scalar`
 
 ### API Endpoints Summary
 - สร้างผู้ใช้ใหม่: `POST /users/`
