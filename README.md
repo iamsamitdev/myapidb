@@ -439,7 +439,7 @@ rm -rf migrations/versions/*.py
 uv run alembic revision --autogenerate -m "Initial migration"
 ```
 
-4.อัพเดต Database: สั่งให้ Alembic อัพเดตฐานข้อมูลตามไฟล์ Migration ใหม่
+4. อัพเดต Database: สั่งให้ Alembic อัพเดตฐานข้อมูลตามไฟล์ Migration ใหม่
 ```bash
 uv run alembic upgrade head
 ```
@@ -475,7 +475,7 @@ uv pip install -r requirements.txt
 uv add -r requirements.txt
 ```
 
-## การใช้งาน Docker กับโปรเจ็กต์นี้
+## การใช้งาน Docker Container กับโปรเจ็กต์นี้
 คุณสามารถใช้ Docker เพื่อรันฐานข้อมูล MySQL และแอปพลิเคชัน FastAPI ได้อย่างง่ายดาย โดยใช้ไฟล์ `Dockerfile`  และ `docker-compose.yml`
 
 ### Step 1: แก้ไขไฟล์ `.env` 
