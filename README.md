@@ -610,7 +610,14 @@ docker compose up -d --build
 ### Step 6: ทดสอบ API
 เปิดเว็บเบราว์เซอร์และไปที่ URL ต่อไปนี้เพื่อตรวจสอบ API:
 - เอกสาร API อัตโนมัติ: `http://127.0.0.1:8000/docs`
-- Scalar API reference: `http://127.0.0.1:8000/redoc`
+- Scalar API reference: `http://127.0.0.1:8000/scalar`
+
+### API Endpoints Summary
+- สร้างผู้ใช้ใหม่: `POST /users/`
+- ดึงข้อมูลผู้ใช้ทั้งหมด: `GET /users/`
+- ดึงข้อมูลผู้ใช้ตาม user_id: `GET /users/{user_id}/`
+- สร้าง Todo ใหม่สำหรับผู้ใช้: `POST /users/{user_id}/todos/`
+- ดึงข้อมูล Todo ทั้งหมด: `GET /todos/`
 
 ### คำสั่งเพิ่มเติมสำหรับจัดการคอนเทนเนอร์ Docker:
 
