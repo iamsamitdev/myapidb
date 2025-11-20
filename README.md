@@ -478,6 +478,33 @@ uv add -r requirements.txt
 ## การใช้งาน Docker Container กับโปรเจ็กต์นี้
 คุณสามารถใช้ Docker เพื่อรันฐานข้อมูล MySQL และแอปพลิเคชัน FastAPI ได้อย่างง่ายดาย โดยใช้ไฟล์ `Dockerfile`  และ `docker-compose.yml`
 
+### โครงสร้างโปรเจ็กต์
+```
+myapidb/
+├── app/
+│   ├── crud.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+├── migrations/
+│   │   ├── env.py
+│   │   ├── script.py.mako
+│   │   └── versions/
+├── .env
+├── Dockerfile
+├── docker-compose.yml
+├── .dockerignore
+├── alembic.ini
+├── main.py
+├── pyproject.toml
+├── requirements.txt
+├── uv.lock
+```
+### Step 0: ติดตั้ง package ที่จำเป็น
+```bash
+uv add python-dotenv cryptography
+```
+
 ### Step 1: แก้ไขไฟล์ `.env` 
 สำหรับเก็บตัวแปรสภาพแวดล้อม
 ```env
@@ -487,8 +514,6 @@ MYSQL_DATABASE=mydb
 MYSQL_USER=root
 MYSQL_PORT=3307
 ```
-
-MYSQL_ROOT_PASSWORD=yourpassword
 
 ### Step 2: สร้างไฟล์ `Dockerfile` 
 สำหรับแอปพลิเคชัน FastAPI
